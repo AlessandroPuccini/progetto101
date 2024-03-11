@@ -14,7 +14,7 @@ import store from './redux/store.js';
 import { Provider } from 'react-redux';
 import './style/index.css';
 // import ShoesCatalog from './components/Pages/ShoesCatalog.jsx';
-// import ManCatalog from './components/Pages/ManCatalog.jsx';
+import ManCatalog from './components/pages/ManCatalog.jsx';
 // import WomanCatalog from './components/Pages/WomanCatalog.jsx';
 // import Checkout from './components/Pages/Checkout.jsx';
 
