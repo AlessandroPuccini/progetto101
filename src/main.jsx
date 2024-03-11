@@ -46,10 +46,10 @@ const router = createBrowserRouter([
     path:'/progetto101/about',
     element: <About />
   },
-  // {
-  //   path:'/mancatalog',
-  //   element: <ManCatalog />
-  // },
+  {
+    path:'/progetto101/mancatalog',
+    element: <ManCatalog />
+  },
   // {
   //   path:'/womancatalog',
   //   element: <WomanCatalog />
