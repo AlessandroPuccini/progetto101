@@ -1,0 +1,147 @@
+a{
+    color: #666;
+    text-decoration: none;
+}
+a:hover{
+    color: darken(#666, 50%);
+}
+
+ul {
+    display: grid;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    width: 100%;
+    height: 257px;
+    margin-bottom: 15px;
+}
+
+
+.logo{
+    width: 100%;
+    margin: 0 auto;
+}
+.logo-section{
+    width: 300px;
+    display: grid;
+    padding-left: 25px;
+}
+
+.login{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 3px;
+}
+.login img{
+    width: 30px;
+}
+.drawer-cart{
+    margin-right: 5px;
+}
+
+.drawer-cart > button{
+    width: 100%;
+    background-color: transparent;
+    min-height: 30px;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: none;
+}
+.drawer-cart > button:hover{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: none;
+}
+.cart-widget > img{
+    position: relative;
+    width: 29px;
+}
+.cart-widget > span{
+    position: absolute;
+    top: -20;
+    right: -20;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50%;
+    padding: 0 5px;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.login-section{
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+}
+.login-section >button:hover{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: none;
+}
+
+@media only screen and ( max-width: 700px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        width: 100%;
+        height: 157px;
+        margin-bottom: 15px;
+    }
+    .logo-section{
+        width: 150px;
+        display: grid;
+        padding-left: 25px;
+    }
+    .logo{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .login-section{
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 6px;
+
+    }
+    .login{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 3px;   
+    }
+    .login img{
+        width: 18px;
+    }
+    .cart-widget > img{
+        position: relative;
+        width: 18px;
+    }
+    .cart-widget > span{
+        position: absolute;
+        top: -10;
+        right: -10;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border-radius: 50%;
+        padding: 0 5px;
+        font-size: 0.6rem;
+        font-weight: lighter;
+    }
+}
