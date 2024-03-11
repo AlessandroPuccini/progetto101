@@ -1,6 +1,4 @@
 import React from 'react'
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
