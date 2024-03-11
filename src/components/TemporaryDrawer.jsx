@@ -4,7 +4,7 @@ import Drawer from '@mui/material/Drawer';
 import Cart from './Cart.jsx';
 import Badge from './Badge.jsx';
 import { useSelector } from 'react-redux';
-// import '../style/temporaryDrawer.css'
+import '../style/temporaryDrawer.css';
 
 
 export default function TemporaryDrawer() {
