@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+/****GENERAL****/
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gotham', sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+button {
+  font-family: 'Gotham', sans-serif;
+  font-size: 1.8rem;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+button:hover{
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.3s ease-in;
+}
