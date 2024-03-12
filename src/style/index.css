@@ -112,8 +112,80 @@ button:hover{
 }
 
 
+/****CATALOGO****/
 
+.catalog-image{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog-image > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.shoeInfo{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.shoes >img{
+  width: 50%;
+  padding: 20px;
+}
+.shoes{
+  width: 60%;
+}
+.shoeInfo-text{
+  width: 40%;
+  padding: 20px;
+  font-size: 1.6rem;
+  word-spacing: 3px;
+  line-height: 20px;
+  text-align: justify;
+}
+
+/***BUTTON***/
+
+.button-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+/****VIDEO****/
+
+.video-donna{
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.video-uomo{
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  padding: 10px;
+}
 
 
 
