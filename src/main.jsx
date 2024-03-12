@@ -9,7 +9,7 @@ import Woman from './components/pages/Woman.jsx';
 import About from './components/pages/About.jsx';
 import Contacts from './components/pages/Contacts.jsx';
 // import Admin from './components/Pages/Admin.jsx';
-// import ShoeInfo from './components/ShoeInfo.jsx';
+import ShoeInfo from './components/pages/ShoeInfo.jsx';
 import store from './redux/store.js';
 import { Provider } from 'react-redux';
 import './style/index.css';
@@ -54,10 +54,10 @@ const router = createBrowserRouter([
     path:'/progetto101/womancatalog',
     element: <WomanCatalog />
   },
-  // {
-  //   path:'/shoe/:shoeId',
-  //   element: <ShoeInfo/>
-  // },
+  {
+    path:'/shoe/:shoeId',
+    element: <ShoeInfo/>
+  },
   // {
   //   path:'/checkout',
   //   element: <Checkout/>
