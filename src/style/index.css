@@ -454,3 +454,24 @@ h6{
     margin-top: 50px;
   }
 }
+
+@media only screen and (min-width: 768px){
+  .about-section{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-text{
+    width: 50%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .about-image{
+    width: 50%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .about-image >img{
+    width: 100%;
+  }
+
+}
