@@ -20,7 +20,7 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const drawerWidth = 400;
+  const drawerWidth = 300;
 
   const list = (anchor) => (
     <Box
@@ -42,6 +42,7 @@ export default function TemporaryDrawer() {
         <React.Fragment key={anchor}>
           <button onClick={toggleDrawer(anchor, true)}><Badge withNumber={cartShoes.length}/></button>
           <Drawer
+            
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
