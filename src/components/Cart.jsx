@@ -25,7 +25,8 @@ const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
 
 const hadleClick = (e) => {
     e.preventDefault();
-  window.location.href = '/checkout';
+    alert('Thank you for your request, we will email you the details soon');
+//   window.location.href = '/progetto101/checkout';
 
 }
 
