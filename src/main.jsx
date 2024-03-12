@@ -8,7 +8,7 @@ import Man from './components/pages/Man.jsx';
 import Woman from './components/pages/Woman.jsx';
 import About from './components/pages/About.jsx';
 import Contacts from './components/pages/Contacts.jsx';
-// import Admin from './components/Pages/Admin.jsx';
+import Admin from './components/pages/Admin.jsx';
 import ShoeInfo from './components/pages/ShoeInfo.jsx';
 import store from './redux/store.js';
 import { Provider } from 'react-redux';
@@ -62,10 +62,10 @@ const router = createBrowserRouter([
   //   path:'/checkout',
   //   element: <Checkout/>
   // },
-  // {
-  //   path:'/admin',
-  //   element: <Admin/>
-  // },
+  {
+    path:'/progetto101/admin',
+    element: <Admin/>
+  },
   
 ]);
 
