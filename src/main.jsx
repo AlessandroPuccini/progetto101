@@ -13,7 +13,7 @@ import Contacts from './components/pages/Contacts.jsx';
 import store from './redux/store.js';
 import { Provider } from 'react-redux';
 import './style/index.css';
-// import ShoesCatalog from './components/Pages/ShoesCatalog.jsx';
+import ShoesCatalog from './components/pages/ShoesCatalog.jsx';
 import ManCatalog from './components/pages/ManCatalog.jsx';
 import WomanCatalog from './components/pages/WomanCatalog.jsx';
 // import Checkout from './components/Pages/Checkout.jsx';
@@ -34,10 +34,10 @@ const router = createBrowserRouter([
     path:'/progetto101/woman',
     element: <Woman />,
   },
-  // {
-  //   path:'/catalog',
-  //   element: <ShoesCatalog />,
-  // },
+  {
+    path:'/progetto101/catalog',
+    element: <ShoesCatalog />,
+  },
   {
     path:'/progetto101/contacts',
     element: <Contacts />,

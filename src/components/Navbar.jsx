@@ -9,10 +9,7 @@ import TemporaryDrawer from './TemporaryDrawer.jsx';
 import LongMenu from './LongMenu.jsx';
 
 
-
-
 function Navbar() {
-
 
   return (
   

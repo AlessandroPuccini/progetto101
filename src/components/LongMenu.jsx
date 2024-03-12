@@ -50,7 +50,7 @@ export default function LongMenu() {
       >
         {options.map((option) => (
           <MenuItem key={option}  >
-            <Link to={`/${option}`}>{option}</Link>
+            <Link to={`/progetto101/${option}`}>{option}</Link>
           </MenuItem>
         ))}
       </Menu>
