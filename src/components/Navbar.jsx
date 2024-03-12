@@ -18,7 +18,7 @@ function Navbar() {
   
     <header className='header'>
         <LongMenu />
-     <Link to={`/`} className='logo-section'><img className='logo' src={IMAGES.image3} alt='Logo'/></Link> 
+     <Link to={`/progetto101`} className='logo-section'><img className='logo' src={IMAGES.image3} alt='Logo'/></Link> 
       <div className='login-section' >
           <Link to={`/admin`}  className='login' ><img src={IMAGES.image4} alt='login'></img></Link>
           <TemporaryDrawer/>

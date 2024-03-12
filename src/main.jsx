@@ -15,7 +15,7 @@ import { Provider } from 'react-redux';
 import './style/index.css';
 // import ShoesCatalog from './components/Pages/ShoesCatalog.jsx';
 import ManCatalog from './components/pages/ManCatalog.jsx';
-// import WomanCatalog from './components/Pages/WomanCatalog.jsx';
+import WomanCatalog from './components/pages/WomanCatalog.jsx';
 // import Checkout from './components/Pages/Checkout.jsx';
 
 
@@ -50,10 +50,10 @@ const router = createBrowserRouter([
     path:'/progetto101/mancatalog',
     element: <ManCatalog />
   },
-  // {
-  //   path:'/womancatalog',
-  //   element: <WomanCatalog />
-  // },
+  {
+    path:'/progetto101/womancatalog',
+    element: <WomanCatalog />
+  },
   // {
   //   path:'/shoe/:shoeId',
   //   element: <ShoeInfo/>
