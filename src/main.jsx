@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     element: <WomanCatalog />
   },
   {
-    path:'/shoe/:shoeId',
+    path:'/progetto101/shoe/:shoeId',
     element: <ShoeInfo/>
   },
   // {
