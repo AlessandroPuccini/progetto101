@@ -44,6 +44,7 @@ button:hover{
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 10px;
 }
 #homePage img {
   width: 100%;
@@ -383,6 +384,10 @@ span{
   display: flex;
   justify-content: center;
 }
+.about-image >img{
+  width: 100%;
+}
+  
 /****FOOTER****/
 
 .footer-section{
@@ -461,7 +466,9 @@ h6{
   button{
     font-size: 1.2rem;
   }
-
+#homePage{
+  margin-top: 5px;
+}
   /***CART***/
   .title >h3{
     font-size: 1.5rem;
@@ -496,12 +503,15 @@ h6{
     font-size: 1.2rem;
   }
   .footer-section{
-    margin-top: 150px;
+    height: 120px;
   }
   /****CARD***/
   .card{
     width: 150px;
     height: 250px;
+  }
+  .card-line-section{
+    margin-bottom: 10px;
   }
   /****SHOEINFO****/
   .shoes{
@@ -513,8 +523,22 @@ h6{
   .shoeInfo-text >p{
     font-size: 1.4rem;
   }
+  form{
+    font-size: 1.2rem;
+  }
+  .admin-text{
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .admin-login input{
+    width: 75%;
 
   }
+
+
+
+
+}
 
     
 
