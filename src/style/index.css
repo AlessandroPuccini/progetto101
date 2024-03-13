@@ -425,7 +425,7 @@ h6{
   .catalog-text{
     background-image: url('../images/catalogSmall.jpg');
   }
-  .shoeInfo >img{
+  .shoes{
     width: 100%;
   }
   .shoeInfo-text{
@@ -458,6 +458,11 @@ h6{
   }
 }
 @media only screen and (max-width: 530px){
+  button{
+    font-size: 1.2rem;
+  }
+
+  /***CART***/
   .title >h3{
     font-size: 1.5rem;
     text-align: center;
@@ -473,7 +478,44 @@ h6{
   .cart >p{
     font-size: 1.4rem;
   }
-}
+  /***ABOUT***/
+  .about-text >p{
+    font-size: 1.4rem;
+  }
+  .about-text >h1{
+    font-size: 2rem;
+  }
+  /***FOOTER***/
+  .footer-section a{
+    font-size: 1.2rem;
+  }
+  .social > svg{
+    font-size: 1.4rem;
+  }
+  .copy{
+    font-size: 1.2rem;
+  }
+  /****CARD***/
+  .card{
+    width: 150px;
+    height: 250px;
+  }
+  /****SHOEINFO****/
+  .shoes{
+    width: 100%;
+  }
+  .shoeInfo-text >h1{
+    font-size: 2rem;
+  }
+  .shoeInfo-text >p{
+    font-size: 1.4rem;
+  }
+
+  }
+
+    
+
+
 
 @media only screen and (min-width: 768px){
   .about-section{
