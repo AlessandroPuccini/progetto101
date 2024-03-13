@@ -22,7 +22,7 @@ function Man() {
       </div>
       <div className='card-line-section'> 
     
-      <Link to={'/PROGETTO101/mancatalog'}>
+      <Link to={'/progetto101/mancatalog'}>
         <CardLine
         imgURL={IMAGES.LineaClassic}
         title='LINEA CLASSIC'></CardLine>
