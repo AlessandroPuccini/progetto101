@@ -393,7 +393,7 @@ span{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+ 
   background-color: black;
   margin-top: 75px;
 }
@@ -494,6 +494,9 @@ h6{
   }
   .copy{
     font-size: 1.2rem;
+  }
+  .footer-section{
+    margin-top: 150px;
   }
   /****CARD***/
   .card{

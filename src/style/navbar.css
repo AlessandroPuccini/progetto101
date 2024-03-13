@@ -91,7 +91,7 @@ ul {
 
 @media only screen and ( max-width: 700px){
 
-    header{
+    .header{
         display: flex;
         align-items: center;
         justify-content: space-between;
