@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 import '../style/temporaryDrawer.css';
 
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer(props) {
+  const { window } = props;
   const [state, setState] = React.useState({
     right: false,
   });
@@ -20,33 +21,33 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const drawerWidth = 300;
+  const drawerWidth = 240;
 
   const list = (anchor) => (
     <Box
-      sx={{ width: drawerWidth }}
-      role="presentation"
-      onKeyDown={toggleDrawer(anchor, false)}
+    sx={{ width: drawerWidth }}
+    role="presentation"
+    onKeyDown={toggleDrawer(anchor, false)}
     >
-     <Cart  
-      />
-      
+     <Cart />
     </Box>
   );
  
   const cartShoes = useSelector((state) => state.cart.cartItems);
-
+  const container = window !== undefined ? () => window().document.body : undefined;
   return (
     <div className='drawer-cart'>
         {['right'].map((anchor) => (
         <React.Fragment key={anchor}>
           <button onClick={toggleDrawer(anchor, true)}><Badge withNumber={cartShoes.length}/></button>
           <Drawer
-            
+          container={container}
+            variant="temporary"
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
           >
+            
             {list(anchor)}
           </Drawer>
         </React.Fragment>
@@ -55,3 +56,10 @@ export default function TemporaryDrawer() {
   );
 }
 
+
+
+{/* <Box
+      sx={{ width: drawerWidth }}
+      role="presentation"
+      onKeyDown={toggleDrawer(anchor, false)}
+    ></Box> */}
