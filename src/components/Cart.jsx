@@ -48,7 +48,7 @@ const hadleClick = (e) => {
           <div key={item.id} className='shoe-cart'>
             <img src={item.imgURL} alt={item.title} />
             <h2>{item.title}</h2>
-            <p>{item.price}</p>
+            <p>€ {item.price}</p>
             <p>{item.qty}</p> 
             <button onClick={() => dispatch(removeFromCart(item.id))}><img src={IMAGES.image10} alt='trash'/></button>
            </div>

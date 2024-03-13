@@ -18,7 +18,7 @@ export const shoesSlice = createSlice({
               {
                 id: 1,
                 title: 'Abby lime',
-                price: 124.90,
+                price: 124.90 ,
                 imgURL: IMAGES.Abby2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -28,7 +28,7 @@ export const shoesSlice = createSlice({
               {
                 id: 2,
                 title: 'Alisha Navy',
-                price: 119.90,
+                price: 119.90 ,
                 imgURL: IMAGES.Abby3,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -48,7 +48,7 @@ export const shoesSlice = createSlice({
               {
                 id: 4,
                 title: 'Betsy Fuxia',
-                price: 139.90,
+                price: 139.90 ,
                 imgURL: IMAGES.Betsy1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -58,7 +58,7 @@ export const shoesSlice = createSlice({
               {
                 id: 5,
                 title: 'Betsy Arancio',
-                price: 159.90,
+                price: 159.90 ,
                 imgURL: IMAGES.Betsy2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -68,7 +68,7 @@ export const shoesSlice = createSlice({
               {
                 id: 6,
                 title: 'Betsy Camelia',
-                price: 169.90,
+                price: 169.90 ,
                 imgURL: IMAGES.Betsy3,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -78,7 +78,7 @@ export const shoesSlice = createSlice({
               {
                 id: 7,
                 title: 'Sly Denim',
-                price: 109.90,
+                price: 109.90 ,
                 imgURL: IMAGES.Smith1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -88,7 +88,7 @@ export const shoesSlice = createSlice({
               {
                 id: 8,
                 title: 'Sly Antik',
-                price: 129.90,
+                price: 129.90 ,
                 imgURL: IMAGES.Smith2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -98,7 +98,7 @@ export const shoesSlice = createSlice({
               {
                 id: 9,
                 title: 'Sybil Oro',
-                price: 168.20,
+                price: 168.20 ,
                 imgURL: IMAGES.Smith3,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -118,7 +118,7 @@ export const shoesSlice = createSlice({
               {
                 id: 11,
                 title: 'Glove Nero',
-                price: 119.80,
+                price: 119.80 ,
                 imgURL: IMAGES.Glenn2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -128,7 +128,7 @@ export const shoesSlice = createSlice({
               {
                 id: 12,
                 title: 'Glem Fuxia',
-                price: 139.90,
+                price: 139.90 ,
                 imgURL: IMAGES.Glenn3,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: true,
@@ -138,7 +138,7 @@ export const shoesSlice = createSlice({
               {
                 id: 13,
                 title: 'Sky Brown',
-                price: 189.60,
+                price: 189.60 ,
                 imgURL: IMAGES.X1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -148,7 +148,7 @@ export const shoesSlice = createSlice({
               {
                 id: 14,
                 title: 'Sky Green',
-                price: 199.90,
+                price: 199.90 ,
                 imgURL: IMAGES.X2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -158,7 +158,7 @@ export const shoesSlice = createSlice({
               {
                 id: 15,
                 title: 'Ginny Brown',
-                price: 139.40,
+                price: 139.40 ,
                 imgURL: IMAGES.Beige1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -168,7 +168,7 @@ export const shoesSlice = createSlice({
               {
                 id: 16,
                 title: 'Ginny Sand',
-                price: 109.80,
+                price: 109.80 ,
                 imgURL: IMAGES.Beige2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -178,7 +178,7 @@ export const shoesSlice = createSlice({
               {
                 id: 17,
                 title: 'Ginny Black',
-                price: 119.90,
+                price: 119.90 ,
                 imgURL: IMAGES.Carpet1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -188,7 +188,7 @@ export const shoesSlice = createSlice({
               {
                 id: 18,
                 title: 'Ginny Red',
-                price: 120.90,
+                price: 120.90 ,
                 imgURL: IMAGES.Carpet2,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,
@@ -198,7 +198,7 @@ export const shoesSlice = createSlice({
               {
                 id: 19,
                 title: 'Ginny Blu',
-                price:  129.90,
+                price:  129.90 ,
                 imgURL: IMAGES.Classic1,
                 description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
                 woman: false,

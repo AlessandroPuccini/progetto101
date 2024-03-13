@@ -8,7 +8,7 @@ function Card({title, imgURL, price, description}) {
       <img src={imgURL} alt='Abby Arancio A' />
         <div className='card-text'>
             <h3>{title}</h3>
-            <p>{price}</p>
+            <p>€ {price}</p>
             {/* <p>{description}</p> */}
             
         </div>

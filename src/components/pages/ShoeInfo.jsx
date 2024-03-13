@@ -44,7 +44,7 @@ function ShoeInfo() {
         </div>  
         <div className='shoeInfo-text'>
           <h1>{shoes[0]?.title}</h1>
-          <p>{shoes[0]?.price}</p>
+          <p>€ {shoes[0]?.price}</p>
           <p>{shoes[0]?.description}</p>
           {/* <Sizes /> */}
           <button className='add-to-cart' onClick={handleAddToCart}>Add to Cart</button>
