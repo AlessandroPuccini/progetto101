@@ -33,6 +33,7 @@ function Admin(errorMsg) {
      info='Email'
      reg={register}
      error={errors.email}
+     errorMsg="Use a valid email address"
      />
      <Input id={idPrefix + '-password'}
      rules={{required: true, minLength: 8, maxLength: 20}}
@@ -40,6 +41,7 @@ function Admin(errorMsg) {
      type='password'
      reg={register}
      error={errors.password}
+     errorMsg='Your password is incorrect'
      />
      <div className='admin-button'>
      <button type='submit'>Sign in</button>
