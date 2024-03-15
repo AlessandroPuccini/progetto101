@@ -3,7 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const DataModel = require('./DataModel');
-const connectDB = require('./connectDB');
+const connectDB = require('./Database');
 connectDB();
 
 
