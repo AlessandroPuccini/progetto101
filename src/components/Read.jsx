@@ -21,7 +21,7 @@ function Read() {
 
   return (
     <div>
-      Read from server: {serverData}
+     {serverData}
     </div>
   )
 }
