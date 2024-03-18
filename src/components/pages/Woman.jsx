@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Woman() {
 
   const handleClick = () => {
-    return window.location.href = '/progetto101/womancatalog';
+    return <Link to={'/progetto101/womancatalog'} />
   }
 
   return (

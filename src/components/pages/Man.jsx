@@ -6,7 +6,7 @@ import Footer from '../Footer.jsx';
 import { Link } from 'react-router-dom';
 
 const handleClick = () => {
- return  window.location.href = '/progetto101/mancatalog';
+  return <Link to={'/progetto101/mancatalog'} />
 }
 
 
