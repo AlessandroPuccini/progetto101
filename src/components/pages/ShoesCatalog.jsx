@@ -13,6 +13,7 @@ function ShoesCatalog() {
   return (
     <>
     <Navbar />
+    <main>
     <div className='catalog-image'>
       <img src={IMAGES.image7} alt="" />
     </div>
@@ -31,6 +32,7 @@ function ShoesCatalog() {
         )
       })}
     </section>
+    </main>
     <Footer />
     </>
   )

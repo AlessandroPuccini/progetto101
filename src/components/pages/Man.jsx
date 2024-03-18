@@ -11,6 +11,7 @@ function Man() {
   return (
     <>
     <Navbar />
+    <main>
     <section className='man'>
       <div className='video-uomo'>
       <video loop autoPlay muted>
@@ -31,6 +32,7 @@ function Man() {
        </Link>
       </div>
     </section>
+    </main>
    <Footer />
     </>
   )

@@ -12,6 +12,7 @@ function Woman() {
   return (
     <>
     <Navbar />
+    <main>
     <section className='woman'>
       <div className='video-donna'>
       <video loop autoPlay muted>
@@ -30,6 +31,7 @@ function Woman() {
           </Link>
       </div>
     </section>
+    </main>
    <Footer />
     </>
   )

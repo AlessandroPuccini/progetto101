@@ -26,6 +26,7 @@ function Admin3() {
   return (
     <>
     <Navbar />
+    <main>
     <form onSubmit={collectData}>
        <div className='admin-text'>
         <h3> ALREADY HAVE AN ACCOUNT? SIGN IN</h3>
@@ -118,6 +119,7 @@ function Admin3() {
 
     </div>
      </form>
+     </main>
     <Footer />
     </>
   )

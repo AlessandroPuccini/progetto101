@@ -14,6 +14,7 @@ function ManCatalog() {
   return (
     <>
       <Navbar/>
+      <main>
       <div className='catalog-image'>
         <img src={IMAGES.image9} alt="man" /> 
     </div>
@@ -33,7 +34,7 @@ function ManCatalog() {
         )
       })}
     </section>
-
+    </main>
       <Footer />
     </>
   )

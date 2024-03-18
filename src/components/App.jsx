@@ -10,6 +10,7 @@ function App() {
     <>
     
     <Navbar />
+    <main>
      <div id='homePage'>
           <div id='man'>
        <Link to={'/progetto101/man'} ><img src={IMAGES.image1}alt='immagine uomo' />
@@ -21,6 +22,7 @@ function App() {
        </div>
       
       </div>
+      </main>
    <Footer />
    
     </>

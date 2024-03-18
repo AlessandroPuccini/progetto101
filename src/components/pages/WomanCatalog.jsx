@@ -15,6 +15,7 @@ function WomanCatalog() {
   return (
     <>
     <Navbar />
+    <main>
     <div className='catalog-image' >
      <img src={IMAGES.image8} alt='woman'/>
     </div>
@@ -33,7 +34,7 @@ function WomanCatalog() {
           )
       })}
     </section>
-
+    </main>
     <Footer/>
       
     </>

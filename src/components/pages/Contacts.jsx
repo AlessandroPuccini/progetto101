@@ -13,6 +13,7 @@ const handleClick = () => {
   return (
     <>
     <Navbar />
+    <main>
     <div className='contact-paragraph'>
       <h3>QUESTIONS? WE ARE HERE TO HELP YOU</h3>
       <p>We will answer to every email within 24 hours Monday to Friday, excluding holidays.
@@ -27,6 +28,7 @@ const handleClick = () => {
         <textarea placeholder='Message' />
         <button onClick={handleClick}>Send</button>
     </div>
+    </main>
     <Footer />
     </>
   )

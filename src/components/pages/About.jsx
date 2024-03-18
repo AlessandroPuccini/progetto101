@@ -8,6 +8,7 @@ function About() {
   return (
     <>
     <Navbar />
+    <main>
     <div className='about-section'>
       <div className='about-text'>
      
@@ -28,6 +29,7 @@ function About() {
         
       </div>
     </div>
+    </main>
     <Footer />
     </>
   )

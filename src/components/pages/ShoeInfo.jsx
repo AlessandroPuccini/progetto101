@@ -37,6 +37,7 @@ function ShoeInfo() {
   return (
     <>
       <Navbar/>
+      <main>
       <section className='shoeInfo'>
         <div className='shoes'>
           <img src={shoes[0]?.imgURL} />
@@ -51,6 +52,7 @@ function ShoeInfo() {
           </div>
           
       </section>
+      </main>
       <Footer />
       </>
   )

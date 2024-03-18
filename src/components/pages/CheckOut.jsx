@@ -19,6 +19,7 @@ const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
   return (
     <>
     <Navbar />
+    <main>
     <h2>Checkout</h2>
    <div className='checkout-recap'>
    {cartShoes.map((item) => (
@@ -49,6 +50,7 @@ const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
         <button>buy</button>
       
     </section>
+    </main>
     <Footer />
     </>
   )
