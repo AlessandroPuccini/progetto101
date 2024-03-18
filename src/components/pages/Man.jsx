@@ -5,9 +5,9 @@ import Navbar from '../Navbar.jsx';
 import Footer from '../Footer.jsx';
 import { Link } from 'react-router-dom';
 
-// const handleClick = () => {
-//   window.location.href = '/mancatalog';
-// }
+const handleClick = () => {
+  window.location.href = '/mancatalog';
+}
 
 
 function Man() {
@@ -34,7 +34,7 @@ function Man() {
        </Link>
       </div>
       <div className='button-section'>
-      <button >Watch others</button>
+      <button onClick={handleClick}>Watch others</button>
       </div>
     </section>
    <Footer />

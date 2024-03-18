@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 function Woman() {
 
   const handleClick = () => {
-
     window.location.href = '/progetto101/womancatalog';
   }
 
@@ -17,9 +16,6 @@ function Woman() {
     <>
     <Navbar />
     <section className='woman'>
-    {/* <div className='woman-text' >
-      <h1>OUR WOMAN COLLECTION</h1>
-      </div> */}
       <div className='video-donna'>
       <video loop autoPlay muted>
         <source  src={IMAGES.VideoDonna} type='video/mp4'/>
