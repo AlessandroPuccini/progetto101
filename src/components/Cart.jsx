@@ -1,4 +1,4 @@
-import React from 'react' 
+import React,{useState} from 'react' 
 import IMAGES from '../images/Images';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCart, removeFromCart, updateQuantity, getTotals } from '../redux/cartSlice';
@@ -7,26 +7,19 @@ import '../style/temporaryDrawer.css';
 import '../style/index.css';
 
 
+
 function Cart() {
 
 const cartShoes = useSelector((state) => state.cart.cartItems);
 const dispatch = useDispatch();
-
-// const [products, setProducts] = useState([]);
-
-// useEffect(() => {
-//   fetch('/api/cart')
-//     .then(response => response.json())
-//     .then(data => setProducts(data));
-// }, []);
 
 const total = cartShoes.reduce((acc, item) => acc + item.price * item.qty, 0);
 const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
 
 const hadleClick = (e) => {
     e.preventDefault();
-    alert('Thank you for your request, we will email you the details soon');
-//   window.location.href = '/progetto101/checkout';
+    // alert('Thank you for your request, we will email you the details soon');
+  window.location.href = '/progetto101/checkout';
 
 }
 
@@ -37,13 +30,6 @@ const hadleClick = (e) => {
     </div>
         <Divider />
         <div id='product'>
-         {/* {products.map((product) => (
-          <div key={product.id}>
-            <img src={product.imgURL} alt={product.title} />
-            <h2>{product.name}</h2>
-            <p>{product.price}</p>
-          </div> 
-        ))} */}
         {cartShoes.map((item) => (
           <div key={item.id} className='shoe-cart'>
             <img src={item.imgURL} alt={item.title} />
@@ -60,7 +46,7 @@ const hadleClick = (e) => {
 
         <Divider /> 
         <div className='checkout'>
-            <button onClick={hadleClick}>Checkout</button>
+          <button onClick={hadleClick}>Checkout</button> 
         </div>
     </section>   
     
@@ -69,3 +55,6 @@ const hadleClick = (e) => {
 
 export default Cart
 
+
+
+{/* <button onClick={hadleClick}>Checkout</button> */}

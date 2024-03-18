@@ -11,7 +11,6 @@ import Footer from '../Footer';
 function Checkout() {
 
 const cartShoes = useSelector((state) => state.cart.cartItems);
-const dispatch = useDispatch();
 
 const total = cartShoes.reduce((acc, item) => acc + item.price * item.qty, 0);
 const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
@@ -31,22 +30,22 @@ const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
            <p>{qty}</p>
            <h4>{total}</h4>
    </div>
-    <section className='login-form'>
+    <section className='admin-login'>
         <p>Already have an account? Sign in</p>
         <input type='text' placeholder='Email' />
-        <input type='text' placeholder='Password' />
+        <input type='password' placeholder='Password' />
     </section>
     <Divider />
   
-    <section className='checkout-form'>
-    <p>Or simply sign up here</p>
-        <input type='text' placeholder='Name' />
+    <section className='admin-login'>
+    <p>Shippping details</p>
+       <input type='text' placeholder='Name' />
        <input type='text' placeholder='Surname' />
        <input type='text' placeholder='address' />
        <input type='text' placeholder='cap' />
        <input type='text' placeholder='city' />
-       <input type='text' placeholder='Email' />
-        {/* <textarea placeholder='Message' /> */}
+       <input type='email' placeholder='Email' />
+      
         <button>buy</button>
       
     </section>
