@@ -6,7 +6,7 @@ import Footer from '../Footer.jsx';
 import { Link } from 'react-router-dom';
 
 const handleClick = () => {
-  window.location.href = '/mancatalog';
+  window.location.href = '/progetto101/mancatalog';
 }
 
 
