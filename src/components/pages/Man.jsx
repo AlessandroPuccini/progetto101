@@ -5,9 +5,6 @@ import Navbar from '../Navbar.jsx';
 import Footer from '../Footer.jsx';
 import { Link } from 'react-router-dom';
 
-const handleClick = () => {
-  return <Link to={'/progetto101/mancatalog'} />
-}
 
 
 function Man() {
@@ -32,9 +29,6 @@ function Man() {
        imgURL={IMAGES.LineaCarpet}
        title='LINEA CARPET'></CardLine>
        </Link>
-      </div>
-      <div className='button-section'>
-      <button onClick={handleClick}>Watch others</button>
       </div>
     </section>
    <Footer />

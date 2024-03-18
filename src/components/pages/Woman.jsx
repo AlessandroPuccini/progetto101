@@ -8,9 +8,6 @@ import { Link } from 'react-router-dom';
 
 function Woman() {
 
-  const handleClick = () => {
-    return <Link to={'/progetto101/womancatalog'} />
-  }
 
   return (
     <>
@@ -31,9 +28,6 @@ function Woman() {
           imgURL={IMAGES.LineaBass}
           title='LINEA BASS'></CardLine>
           </Link>
-      </div>
-      <div className='button-section'>
-      <button onClick={handleClick}>Watch others</button>
       </div>
     </section>
    <Footer />
