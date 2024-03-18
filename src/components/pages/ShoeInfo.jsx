@@ -47,7 +47,7 @@ function ShoeInfo() {
           <h1>{shoes[0]?.title}</h1>
           <p>€ {shoes[0]?.price}</p>
           <p>{shoes[0]?.description}</p>
-          {/* <Sizes /> */}
+          <Sizes />
           <button className='add-to-cart' onClick={handleAddToCart}>Add to Cart</button>
           </div>
           
