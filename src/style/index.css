@@ -18,6 +18,7 @@ main{
   position: relative;
   min-height: 100vh;
   display: contents;
+  margin-top: 0px;
 }
 
 body {
@@ -585,5 +586,10 @@ span{
   .about-image >img{
     width: 100%;
   }
-
+   #man{
+    width: 50%;
+   }
+   #woman{
+    width: 50%;
+   }
 }

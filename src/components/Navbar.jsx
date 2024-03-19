@@ -1,7 +1,4 @@
 import React,{ useState } from 'react'
-// import Box from '@mui/material/Box';
-// import Drawer from '@mui/material/Drawer';
-// import Button from '@mui/material/Button';
 import '../style/navbar.css';
 import { Link } from 'react-router-dom';
 import IMAGES from '../images/Images.jsx';
@@ -27,3 +24,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
