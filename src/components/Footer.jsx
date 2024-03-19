@@ -10,8 +10,14 @@ function Footer() {
   return (
     <section className='footer-section'>
   
-      <div>
+      <div className='footer-text'>
      <a href=''><h6>Terms and Conditions</h6></a> 
+     </div>
+     <div className='footer-text'>
+     <a href=''><h6>Privacy policy</h6></a> 
+     </div>
+      <div className='footer-text'>
+     <a href=''><h6>Newsletter</h6></a> 
       </div>
       <div className='social'>
       <InstagramIcon fontSize='large'/> 
