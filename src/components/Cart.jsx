@@ -41,9 +41,10 @@ const hadleClick = (e) => {
            ))}
         </div>    
         <Divider />
+        <div className='cart-qty-tot'>
         <p>Quantity: {qty}</p>
         <h4>Total: {total}€</h4>
-
+        </div>
         <Divider /> 
         {/* <div className='checkout'>
           <button onClick={hadleClick}>Checkout</button> 

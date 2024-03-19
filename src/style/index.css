@@ -230,6 +230,14 @@ video{
   padding: 2px;
   border-radius: 40px;
 }
+.cart-qty-tot > p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.cart-qty-tot > h4{
+  text-align: center;
+ font-size: 1.4rem;
+}
 #product{
   width: 100%;
   display: flex;
@@ -371,6 +379,10 @@ span{
 }
 .checkout{
   text-align: center;
+}
+.checkout > button{
+margin: 0 auto;
+margin-top: 20px;
 }
 
 /****CONTACT****/
