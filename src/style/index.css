@@ -17,6 +17,7 @@ html {
 main{
   position: relative;
   min-height: 100vh;
+  display: contents;
 }
 
 body {
@@ -41,6 +42,7 @@ button:hover{
   color: #ffffff;
   transition: 0.3s ease-in;
 }
+
 
 /***HOME***/
 
@@ -73,6 +75,9 @@ button:hover{
   flex-wrap: wrap;
   justify-content: space-evenly;;
   margin-bottom: 90px;
+}
+.card-line-section > a{
+  width: 50%;
 }
 
 
@@ -158,6 +163,9 @@ button:hover{
   line-height: 20px;
   text-align: justify;
 }
+.add-to-cart{
+  margin-top: 20px;
+}
 
 /***BUTTON***/
 
@@ -194,6 +202,8 @@ video{
   object-fit: cover;
   padding: 10px;
 }
+
+
 /***CART***/
 
 .cart{

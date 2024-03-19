@@ -30,29 +30,29 @@ export default function Sizes() {
       <h5>Choose your size</h5>
     </div>
     <hr></hr>
-    <div>
+    <div className='sizes'>
         <ThemeProvider theme={theme}>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label}  sx={{width:20}}>
           </Checkbox> 35</Button>
-        <Button size='large'><Checkbox {...label} size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 36</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 37</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label}  sx={{width:20}}>
           </Checkbox> 38</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label}  sx={{width:20}}>
           </Checkbox> 39</Button>
-        <Button size='large'><Checkbox {...label} size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 40</Button>
-        <Button size='large'><Checkbox {...label} size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 41</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 42</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label}  sx={{width:20}}>
           </Checkbox> 43</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 44</Button>
-        <Button size='large'><Checkbox {...label}  size='large'>
+        <Button size='large'><Checkbox {...label} sx={{width:20}}>
           </Checkbox> 45</Button>
        
         </ThemeProvider>
