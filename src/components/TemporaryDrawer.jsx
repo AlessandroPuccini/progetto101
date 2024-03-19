@@ -1,7 +1,9 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Cart from './Cart.jsx';
+import CheckOut from './pages/CheckOut.jsx';
 import Badge from './Badge.jsx';
 import { useSelector } from 'react-redux';
 import '../style/temporaryDrawer.css';
@@ -9,17 +11,23 @@ import '../style/temporaryDrawer.css';
 
 export default function TemporaryDrawer(props) {
   const { window } = props;
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     right: false,
   });
+  const [isCheckOut, setIsCheckOut] = useState(false);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
+    
     setState({ ...state, [anchor]: open });
   };
+ 
+  const handleCheckOutClick = () => {
+    setIsCheckOut(true);
+  };
+
 
   const drawerWidth = 240;
 
@@ -29,7 +37,12 @@ export default function TemporaryDrawer(props) {
     role="presentation"
     onKeyDown={toggleDrawer(anchor, false)}
     >
-     <Cart />
+     {!isCheckOut ? <Cart/> : <CheckOut/>}
+     
+    <div className='checkout'>
+     {!isCheckOut &&(<button onClick={handleCheckOutClick}>Checkout</button> )}     
+        </div>
+    
     </Box>
   );
  
