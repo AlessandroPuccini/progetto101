@@ -1,154 +1,152 @@
-
-
-
-
-import React, {useId, useState} from 'react';
-import axios from 'axios';
-import { useForm } from 'react-hook-form';
+import React, { useState, useEffect} from 'react'
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import Divider from '@mui/material/Divider';
+import { Divider } from '@mui/material';
 import '../../style/index.css';
-import Input from '../Input';
 
+function Admin3() {
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-
-function Admin() {
-  const idPrefix = useId();
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors }, 
-    reset } = useForm(); 
-
-
-    let [inputValue, setInputValue] = useState('');
-
-    const saveData = async () => {
-        try{
-          await axios.post('http://localhost:3001/writetodatabase', {content: inputValue});
-            console.log("Data:",inputValue );
-            alert("Data saved:", inputValue);
-    
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
+  const collectData = async (e) => {
+    console.log('collectData was called');
+    e.preventDefault();
+    try {
+      let result = await fetch('http://localhost:4000/', {
+        method: 'post',
+        body: JSON.stringify({name, surname, email, password}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!result.ok) {
+        throw new Error(`HTTP error! status: ${result.status}`);
+      }
+      result = await result.json();
+      localStorage.setItem('users', JSON.stringify(result));
+    } catch (error) {
+      console.error('A fetch error occurred', error);
     }
-    const handleFormSubmit = (data) => {
-      reset();
-      saveData();
-      alert('Form submitted'); 
-    };
-
-  return (
+  }
     
-     <>
+  return (
+    <>
     <Navbar />
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
-    <div className='admin-text'>
+    <main>
+    <form onSubmit={collectData}>
+       <div className='admin-text'>
         <h3> ALREADY HAVE AN ACCOUNT? SIGN IN</h3>
         </div>
-     <Input id={idPrefix + '-email'}
- 
-     rules={{required: true, pattern: /^\S+@\S+$/i}}
-     info='Email'
-     reg={register}
-     error={errors.email}
-     errorMsg="Use a valid email address"
-     />
-     <Input id={idPrefix + '-password'}
+    <div className='admin-login'>
+      <label htmlFor="email2">Email</label>
+      <input 
+        id="email2"
+        name="email2"
+        type='email'
+      />
+      <label htmlFor="password2">Password</label>
+      <input 
+        id="password2"
+        name="password2"
+        type="password"
 
-     rules={{required: true, minLength: 8, maxLength: 20}}
-     info='Password'
-     type='password'
-     reg={register}
-     error={errors.password}
-     errorMsg='Your password is incorrect'
-     />
-     <div className='admin-button'>
+      />
+      <div className='admin-button'>
      <button type='submit'>Sign in</button>
      </div>
+    </div>  
     <Divider />
-   <div className='admin-text'>
+    <div className='admin-text'>
     <h3>OR SIMPLY SIGNUP HERE</h3>
     </div>
-    <Input id={idPrefix + '-name'}
-  
-    rules={{required: true}} 
-    info='Name'
-    reg={register}
-    error={errors.Name}
-    errorMsg='Please enter your name'/>
-
-    <Input id={idPrefix + '-surname'} 
-
-    rules={{required: true}}
-    info='Surname'
-    reg={register}
-    error={errors.Surname}
-    errorMsg='Please enter your last name'/>
-
-<Input id={idPrefix + '-address'} 
- 
-    rules={{required: true}}
-    info='Address'
-    reg={register}
-    error={errors.Address} />
-
-<Input id={idPrefix + '-city'} 
- 
-    rules={{required: true}}
-    info='City'
-    reg={register}
-    error={errors.City} />
-
-<Input id={idPrefix + '-zip'}
-
-    rules={{required: true, pattern: /^\d{5}$/}}
-    info='Zip code'
-    reg={register}
-    error={errors.Zip}
-    errorMsg='Please enter a valid zip code' />
-
-<Input id={idPrefix + '-email'}
-
-     rules={{required: true, pattern: /^\S+@\S+$/i}}
-     info='Email'
-     reg={register}
-     error={errors.email}
-     errorMsg='Use a valid email address' 
-     />
-  <Input id={idPrefix + '-password'}
-
-     rules={{required: true, minLength: 8, maxLength: 20}}
-     info='Password'
-     type='password'
-     reg={register}
-     error={errors.password}
-     errorMsg='Your password should be at least 8 characters long' 
-     />
-  <Input id={idPrefix + '-confirmPassword'}
-  
-     rules={{required: true, minLength: 8, maxLength: 20}}
-     info='PasswordCheck'
-     type='password'
-     reg={register}
-     error={errors.PasswordCheck}
-     
-     />
-
-    <div className='admin-button'>
-     <button  type='submit'>Sign up</button>
+    <div className='admin-login'>
+    
+    <label htmlFor="name">Name</label>
+      <input 
+        id="name"
+        name="name"
+        type='text'
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <label htmlFor="surname">Surname</label>
+      <input 
+        id="surname"
+        name="surname"
+        type='text'
+        value={surname}
+        onChange={(e) => setSurname(e.target.value)}
+    
+      />
+      <label htmlFor="address">Address</label>
+      <input 
+        id="address"
+        name="address"
+        type='text'
+      />
+      <label htmlFor="city">City</label>
+      <input 
+        id="city"
+        name="city"
+        type='text'
+      />
+      <label htmlFor="zip">Zip Code</label>
+      <input 
+        id="zip"
+        name="zip"
+        type='text'
+      />
+      <label htmlFor="email">Email</label>
+      <input 
+        id="email"
+        name="email"
+        type='email'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <label htmlFor="password">Password</label>
+      <input 
+        id="password"
+        name="password"
+        type='password'
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <label htmlFor="passwordCheck">Password Check</label>
+      <input 
+        id="passwordCheck"
+        name="passwordCheck"
+        type="password"
+       
+      />
+      <div className='admin-button'>
+     <button type='submit'>Sign up</button>
     </div>
-    </form>
-    <Footer />
 
+    </div>
+     </form>
+     </main>
+    <Footer />
     </>
-   
   )
 }
 
-export default Admin
+export default Admin3
 
 
 
+
+// const collectData = async (e) => {
+//   e.preventDefault();
+//   let result = await fetch('http://localhost:4000/', {
+//     method: 'post',
+//     body: JSON.stringify({name, surname, email, password}),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//    result = await result.json();
+//    localStorage.setItem('users', JSON.stringify(result));
+// }
