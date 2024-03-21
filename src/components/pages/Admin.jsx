@@ -5,26 +5,26 @@ import { Divider } from '@mui/material';
 import '../../style/index.css';
 
 function Admin3() {
- 
-    
+
+
   return (
     <>
     <Navbar />
     <main>
-    <form onSubmit={collectData}>
+    <form >
        <div className='admin-text'>
         <h3> ALREADY HAVE AN ACCOUNT? SIGN IN</h3>
         </div>
     <div className='admin-login'>
       <label htmlFor="email2">Email</label>
-      <input 
+      <input
         id="email2"
         name="email2"
         type='email'
-        
+
       />
       <label htmlFor="password2">Password</label>
-      <input 
+      <input
         id="password2"
         name="password2"
         type="password"
@@ -33,15 +33,15 @@ function Admin3() {
       <div className='admin-button'>
      <button type='submit'>Sign in</button>
      </div>
-    </div>  
+    </div>
     <Divider />
     <div className='admin-text'>
     <h3>OR SIMPLY SIGNUP HERE</h3>
     </div>
     <div className='admin-login'>
-    
+
     <label htmlFor="name">Name</label>
-      <input 
+      <input
         id="name"
         name="name"
         type='text'
@@ -49,34 +49,34 @@ function Admin3() {
         // onChange={(e) => setName(e.target.value)}
       />
       <label htmlFor="surname">Surname</label>
-      <input 
+      <input
         id="surname"
         name="surname"
         type='text'
         // value={surname}
         // onChange={(e) => setSurname(e.target.value)}
-    
+
       />
       <label htmlFor="address">Address</label>
-      <input 
+      <input
         id="address"
         name="address"
         type='text'
       />
       <label htmlFor="city">City</label>
-      <input 
+      <input
         id="city"
         name="city"
         type='text'
       />
       <label htmlFor="zip">Zip Code</label>
-      <input 
+      <input
         id="zip"
         name="zip"
         type='text'
       />
       <label htmlFor="email">Email</label>
-      <input 
+      <input
         id="email"
         name="email"
         type='email'
@@ -84,7 +84,7 @@ function Admin3() {
         // onChange={(e) => setEmail(e.target.value)}
       />
       <label htmlFor="password">Password</label>
-      <input 
+      <input
         id="password"
         name="password"
         type='password'
@@ -92,11 +92,11 @@ function Admin3() {
         // onChange={(e) => setPassword(e.target.value)}
       />
       <label htmlFor="passwordCheck">Password Check</label>
-      <input 
+      <input
         id="passwordCheck"
         name="passwordCheck"
         type="password"
-       
+
       />
       <div className='admin-button'>
      <button type='submit'>Sign up</button>
@@ -140,3 +140,5 @@ export default Admin3
 //     console.error('A fetch error occurred', error);
 //   }
 // }
+
+// onSubmit={collectData}
