@@ -5,31 +5,7 @@ import { Divider } from '@mui/material';
 import '../../style/index.css';
 
 function Admin3() {
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const collectData = async (e) => {
-    console.log('collectData was called');
-    e.preventDefault();
-    try {
-      let result = await fetch('http://localhost:4000/', {
-        method: 'post',
-        body: JSON.stringify({name, surname, email, password}),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!result.ok) {
-        throw new Error(`HTTP error! status: ${result.status}`);
-      }
-      result = await result.json();
-      localStorage.setItem('users', JSON.stringify(result));
-    } catch (error) {
-      console.error('A fetch error occurred', error);
-    }
-  }
+ 
     
   return (
     <>
@@ -45,6 +21,7 @@ function Admin3() {
         id="email2"
         name="email2"
         type='email'
+        
       />
       <label htmlFor="password2">Password</label>
       <input 
@@ -68,16 +45,16 @@ function Admin3() {
         id="name"
         name="name"
         type='text'
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        // value={name}
+        // onChange={(e) => setName(e.target.value)}
       />
       <label htmlFor="surname">Surname</label>
       <input 
         id="surname"
         name="surname"
         type='text'
-        value={surname}
-        onChange={(e) => setSurname(e.target.value)}
+        // value={surname}
+        // onChange={(e) => setSurname(e.target.value)}
     
       />
       <label htmlFor="address">Address</label>
@@ -103,16 +80,16 @@ function Admin3() {
         id="email"
         name="email"
         type='email'
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        // value={email}
+        // onChange={(e) => setEmail(e.target.value)}
       />
       <label htmlFor="password">Password</label>
       <input 
         id="password"
         name="password"
         type='password'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        // value={password}
+        // onChange={(e) => setPassword(e.target.value)}
       />
       <label htmlFor="passwordCheck">Password Check</label>
       <input 
@@ -137,16 +114,29 @@ export default Admin3
 
 
 
+// const [name, setName] = useState('');
+// const [surname, setSurname] = useState('');
+// const [email, setEmail] = useState('');
+// const [password, setPassword] = useState('');
+
 
 // const collectData = async (e) => {
+//   console.log('collectData was called');
 //   e.preventDefault();
-//   let result = await fetch('http://localhost:4000/', {
-//     method: 'post',
-//     body: JSON.stringify({name, surname, email, password}),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//    result = await result.json();
-//    localStorage.setItem('users', JSON.stringify(result));
+//   try {
+//     let result = await fetch('http://localhost:4000/', {
+//       method: 'post',
+//       body: JSON.stringify({name, surname, email, password}),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+//     if (!result.ok) {
+//       throw new Error(`HTTP error! status: ${result.status}`);
+//     }
+//     result = await result.json();
+//     localStorage.setItem('users', JSON.stringify(result));
+//   } catch (error) {
+//     console.error('A fetch error occurred', error);
+//   }
 // }
