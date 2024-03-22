@@ -4,7 +4,44 @@ import Footer from '../Footer';
 import { Divider } from '@mui/material';
 import '../../style/index.css';
 
-function Admin3() {
+function Admin() {
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+const [feedBackMessage, setFeedBackMessage] = useState('');
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const userData = {
+    name: name,
+    email: email,
+    password: password
+  };
+ fetch('http://localhost:5050/record/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userData),
+ })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Request failed!');
+  })
+  .then(data => {
+    setFeedBackMessage('User registered successfully!');
+    setName('');
+    setEmail('');
+    setPassword('');
+
+  })
+  .catch(error => {
+    console.error('Error during the registration:', error);
+  })
+
+ };
 
 
   return (
@@ -34,10 +71,13 @@ function Admin3() {
      <button type='submit'>Sign in</button>
      </div>
     </div>
+    </form>
     <Divider />
+    <form onSubmit={handleSubmit}>
     <div className='admin-text'>
     <h3>OR SIMPLY SIGNUP HERE</h3>
     </div>
+    {feedBackMessage && <div className='feedBackMessage'>{feedBackMessage}</div>}
     <div className='admin-login'>
 
     <label htmlFor="name">Name</label>
@@ -45,8 +85,8 @@ function Admin3() {
         id="name"
         name="name"
         type='text'
-        // value={name}
-        // onChange={(e) => setName(e.target.value)}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
       <label htmlFor="surname">Surname</label>
       <input
@@ -80,16 +120,16 @@ function Admin3() {
         id="email"
         name="email"
         type='email'
-        // value={email}
-        // onChange={(e) => setEmail(e.target.value)}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <label htmlFor="password">Password</label>
       <input
         id="password"
         name="password"
         type='password'
-        // value={password}
-        // onChange={(e) => setPassword(e.target.value)}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
       />
       <label htmlFor="passwordCheck">Password Check</label>
       <input
@@ -110,7 +150,7 @@ function Admin3() {
   )
 }
 
-export default Admin3
+export default Admin
 
 
 

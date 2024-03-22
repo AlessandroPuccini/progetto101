@@ -14,7 +14,7 @@ serverApi: {
 try{
     await client.connect();
     await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You are good to go!");
+    console.log("Pinged your deployment. Database connected. You are good to go!");
 } catch(err) {
     console.error(err);
 }
