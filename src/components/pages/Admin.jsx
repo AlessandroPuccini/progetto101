@@ -6,8 +6,13 @@ import '../../style/index.css';
 
 function Admin() {
 const [name, setName] = useState('');
+const [surname, setSurname] = useState('');
+const [address, setAddress] = useState('');
+const [city, setCity] = useState('');
+const [zipcode, setZipcode] = useState('');
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
+const [passwordCheck, setPasswordCheck] = useState('');
 const [feedBackMessage, setFeedBackMessage] = useState('');
 
 const handleSubmit = async (event) => {
@@ -33,9 +38,13 @@ const handleSubmit = async (event) => {
   .then(data => {
     setFeedBackMessage('User registered successfully!');
     setName('');
+    setSurname('');
+    setAddress('');
+    setCity('');
+    setZipcode('');
     setEmail('');
     setPassword('');
-
+    setPasswordCheck('');
   })
   .catch(error => {
     console.error('Error during the registration:', error);
@@ -93,8 +102,8 @@ const handleSubmit = async (event) => {
         id="surname"
         name="surname"
         type='text'
-        // value={surname}
-        // onChange={(e) => setSurname(e.target.value)}
+        value={surname}
+        onChange={(e) => setSurname(e.target.value)}
 
       />
       <label htmlFor="address">Address</label>
@@ -102,18 +111,24 @@ const handleSubmit = async (event) => {
         id="address"
         name="address"
         type='text'
+        value={address}
+        onChange={(e) => setAddress(e.target.value)}
       />
       <label htmlFor="city">City</label>
       <input
         id="city"
         name="city"
         type='text'
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
       />
       <label htmlFor="zip">Zip Code</label>
       <input
         id="zip"
         name="zip"
         type='text'
+        value={zipcode}
+        onChange={(e) => setZipcode(e.target.value)}
       />
       <label htmlFor="email">Email</label>
       <input

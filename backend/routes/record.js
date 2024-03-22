@@ -23,6 +23,10 @@ router.post('/', async (req, res) => {
     try{
         let newDocument = {
             name: req.body.name,
+            surname: req.body.surname,
+            address: req.body.address,
+            city: req.body.city,
+            zipcode: req.body.zipcode,
             email: req.body.email,
             password: req.body.password,
         };
