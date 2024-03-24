@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button } from '@mui/material'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+
 
 
 function Contacts() {

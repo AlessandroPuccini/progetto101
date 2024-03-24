@@ -39,6 +39,24 @@ router.post('/', async (req, res) => {
         res.status(500).send("Error adding record");
     }
 });
+router.post('/', async (req, res) => {
+    const { email2, password2 } = req.body;
+    try{
+        const collection = await db.collection("records");
+        const query = { email: email2, password: password2 };
+        const user = await collection.findOne(query);
+
+        if(!user){
+            res.status(401).send("Invalid credentials");
+        }else{
+            res.status(200).send({userId: user._id});
+        }
+    }catch(error){
+        console.error("Error during login:",error);
+        res.status(500).send("Internal server error");
+    }
+});
+    
 
 router.delete('/:id', async (req, res) => {
     try{

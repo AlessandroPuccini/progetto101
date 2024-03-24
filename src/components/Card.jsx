@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({title, imgURL, price, description}) {
+function Card({title, imgURL, price }) {
 
 
   return (
@@ -10,7 +10,7 @@ function Card({title, imgURL, price, description}) {
         <div className='card-text'>
             <h3>{title}</h3>
             <p>€ {price}</p>
-            {/* <p>{description}</p> */}
+         
             
         </div>
     </div>

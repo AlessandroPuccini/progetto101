@@ -29,9 +29,7 @@ function ShoeInfo() {
     dispatch(addToCart(serializableShoe));
   };
 
- const handleRemoveFromCart = () => {
-  dispatch(removeFromCart(item.id));
- };
+
 
 
   return (

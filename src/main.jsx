@@ -17,6 +17,7 @@ import ShoesCatalog from './components/pages/ShoesCatalog.jsx';
 import ManCatalog from './components/pages/ManCatalog.jsx';
 import WomanCatalog from './components/pages/WomanCatalog.jsx';
 import Checkout from './components/pages/CheckOut.jsx';
+import Userlist from './components/Userlist.jsx';
 
 
 
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
   {
     path:'/progetto101/admin',
     element: <Admin/>
+  },
+  {
+    path: '/progetto101/userlist',
+    element: <Userlist />,
   },
   
 ]);

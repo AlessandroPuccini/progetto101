@@ -14,6 +14,9 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [passwordCheck, setPasswordCheck] = useState('');
 const [feedBackMessage, setFeedBackMessage] = useState('');
+const [loginMessage, setLoginMessage] = useState('');
+const [email2, setEmail2] = useState('');
+const [password2, setPassword2] = useState('');
 
 const handleSubmit = async (event) => {
   event.preventDefault();
@@ -49,32 +52,58 @@ const handleSubmit = async (event) => {
   .catch(error => {
     console.error('Error during the registration:', error);
   })
-
  };
+
+const handleLogin = async (event) => {
+  event.preventDefault();
+  try{
+    const response = await fetch('http://localhost:5050/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({email: email2, password: password2}),
+    });
+    if(response.ok){
+      const data = await response.json();
+      console.log('User ID:', data.userId);
+      setLoginMessage('Login successful!');
+    }else{
+      console.error('Login failed, please try again or sign up below');
+      setLoginMessage('Login failed, please try again or sign up below');
+    }
+    }catch(error){
+      console.error('Error during login:', error);
+
+  }
+};
 
 
   return (
     <>
     <Navbar />
     <main>
-    <form >
+    <form onSubmit={handleLogin}>
        <div className='admin-text'>
         <h3> ALREADY HAVE AN ACCOUNT? SIGN IN</h3>
         </div>
+        {loginMessage && <div className='loginMessage' >{loginMessage}</div>}
     <div className='admin-login'>
       <label htmlFor="email2">Email</label>
       <input
         id="email2"
         name="email2"
         type='email'
-
+        value={email2}
+        onChange={(e) => setEmail2(e.target.value)}
       />
       <label htmlFor="password2">Password</label>
       <input
         id="password2"
         name="password2"
         type="password"
-
+        value={password2}
+        onChange={(e) => setPassword2(e.target.value)}
       />
       <div className='admin-button'>
      <button type='submit'>Sign in</button>
@@ -151,6 +180,8 @@ const handleSubmit = async (event) => {
         id="passwordCheck"
         name="passwordCheck"
         type="password"
+        value={passwordCheck}
+        onChange={(e) => setPasswordCheck(e.target.value)}
 
       />
       <div className='admin-button'>
@@ -167,33 +198,3 @@ const handleSubmit = async (event) => {
 
 export default Admin
 
-
-
-// const [name, setName] = useState('');
-// const [surname, setSurname] = useState('');
-// const [email, setEmail] = useState('');
-// const [password, setPassword] = useState('');
-
-
-// const collectData = async (e) => {
-//   console.log('collectData was called');
-//   e.preventDefault();
-//   try {
-//     let result = await fetch('http://localhost:4000/', {
-//       method: 'post',
-//       body: JSON.stringify({name, surname, email, password}),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     });
-//     if (!result.ok) {
-//       throw new Error(`HTTP error! status: ${result.status}`);
-//     }
-//     result = await result.json();
-//     localStorage.setItem('users', JSON.stringify(result));
-//   } catch (error) {
-//     console.error('A fetch error occurred', error);
-//   }
-// }
-
-// onSubmit={collectData}
