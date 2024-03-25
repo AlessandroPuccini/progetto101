@@ -57,7 +57,7 @@ const handleSubmit = async (event) => {
 const handleLogin = async (event) => {
   event.preventDefault();
   try{
-    const response = await fetch('http://localhost:5050/login', {
+    const response = await fetch('http://localhost:5050/record', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

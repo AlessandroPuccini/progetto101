@@ -56,11 +56,36 @@ router.post('/', async (req, res) => {
         res.status(500).send("Internal server error");
     }
 });
+
+router.put('/:id'), async (req, res) => {
+    try{
+        const userId = req.params.id;
+        const newName = req.body.name;
+        const newEmail = req.body.email;
+        const query = { _id: new ObjectId(userId) };
+        const updates = { $set: { name: newName, email: newEmail } };
+        const collection = db.collection("records");
+        const results = await collection.updateOne(query, updates);
+
+        if(results.modifiedCount > 0){
+            res.status(200).send({message: "User updated successfully"});
+        }else{
+            res.status(404).send({message: "User not found"})
+        }
+    }catch(err){
+        console.error(err);
+        res.status(500).send("internal server error");
+    }
+} 
     
 
 router.delete('/:id', async (req, res) => {
     try{
-        const query = { _id: new ObjectId(req.params.id) };
+        const id = req.params.id;
+        if (!ObjectId.isValid(id)) {
+            return res.status(400).send('Invalid ID');
+        }     
+        const query = { _id: new ObjectId(id) };
 
         const collection = db.collection("records");
         let result = await collection.deleteOne(query);

@@ -529,7 +529,16 @@ margin-top: 20px;
   align-items: center;
   padding: 20px;
 }
+.users > li > button{
+  text-align: center;
+  font-size: 0.7rem;
+  margin-left: 25px;
+}
 .users >li{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   list-style: none;
   padding: 30px;
