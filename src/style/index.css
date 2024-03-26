@@ -520,7 +520,9 @@ margin-top: 20px;
   align-items: center;
   padding: 20px;
 }
-
+.users >li > p{
+  padding-right: 10px;
+}
 .users{
   width: 100%;
   display: flex;

@@ -20,7 +20,7 @@ function ShoesCatalog() {
     <section className='card-section'>
       {shoes.map((shoe) => {
         return (
-          <Link to={`/shoe/${shoe.id}`} key={shoe.id}>
+          <Link to={`/progetto101/shoe/${shoe.id}`} key={shoe.id}>
             <Card
             key={shoe.id}
             title={shoe.title}

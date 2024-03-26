@@ -12,12 +12,13 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     let collection = await db.collection("records");
-    let query = { _id: ObjectId(req.params.id) };
+    let query = { _id: new ObjectId(req.params.id) };
     let result = await collection.findOne(query);
 
     if(!result) res.send("Record not found").status(404);
     else res.send(result).status(200);
 });
+
 
 router.post('/', async (req, res) => {
     try{
@@ -57,11 +58,13 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.put('/:id'), async (req, res) => {
+router.put('/:id', async (req, res) => {
+    console.log('Received PUT request');
     try{
         const userId = req.params.id;
         const newName = req.body.name;
         const newEmail = req.body.email;
+        console.log(ObjectId);
         const query = { _id: new ObjectId(userId) };
         const updates = { $set: { name: newName, email: newEmail } };
         const collection = db.collection("records");
@@ -76,7 +79,7 @@ router.put('/:id'), async (req, res) => {
         console.error(err);
         res.status(500).send("internal server error");
     }
-} 
+} );
     
 
 router.delete('/:id', async (req, res) => {

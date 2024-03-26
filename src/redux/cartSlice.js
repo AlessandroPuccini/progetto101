@@ -26,9 +26,7 @@ import { createSlice } from '@reduxjs/toolkit';
       })
     }
   },
-    // loadCart: (state, action) => {
-    //   return action.payload;
-    // },
+    
  
     removeFromCart: (state, action) => {
       state.cartItems = state.cartItems.filter(item => 
@@ -41,12 +39,15 @@ import { createSlice } from '@reduxjs/toolkit';
         item.quantity = quantity;
       }
   },
+  clearCart: (state) => {
+    state.cartItems = [];
+  },
 }
 });
 
 
 
-export const { addToCart,removeFromCart, updateQuantity, getTotals,} = cartSlice.actions;
+export const { addToCart,removeFromCart, updateQuantity, getTotals, clearCart} = cartSlice.actions;
 
 export const cartReducer =  cartSlice.reducer;
 
