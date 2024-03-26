@@ -22,8 +22,14 @@ const handleSubmit = async (event) => {
   event.preventDefault();
   const userData = {
     name: name,
+    surname: surname,
+    address: address,
+    city: city,
+    zipcode: zipcode,
     email: email,
-    password: password
+    password: password,
+    passwordCheck: passwordCheck,
+
   };
  fetch('http://localhost:5050/record/', {
     method: 'POST',

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import '../style/index.css';
-import IMAGES from '../images/Images.jsx';
+
 
 
 
