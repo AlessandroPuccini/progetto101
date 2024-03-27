@@ -44,7 +44,7 @@ const Userlist = () => {
             })
             .then(async () => {
                 console.log('User edited successfully');
-                const fetchResponse = await fetch('http://localhost:5050/record');
+                const fetchResponse = await fetch(`http://localhost:5050/record/`);
                 const usersData = await fetchResponse.json();
                 setUsers(usersData);
             })
@@ -78,7 +78,7 @@ const handleDelete = async (_id) => {
         <>
         <Navbar />
         <div className='users-title'>
-        <h3>Users list</h3>
+        <h3>USER LIST</h3>
         </div>
         <ul className='users'>
             {users.map((user) => (

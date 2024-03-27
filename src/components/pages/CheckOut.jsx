@@ -21,7 +21,7 @@ const handleClick = (e) => {
   e.preventDefault();
   alert('Thank you! Your order has been placed. We have emailed your order confirmation, and will send you an update when your order has shipped.');
   dispatch(clearCart());
-  window.location.href = '/progetto101/catalog';
+  // window.location.href = '/progetto101/catalog';
 }
 
 
