@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 function Man() {
   return (
     <>
+    <div className='container'>
     <Navbar />
     <main>
     <section className='man'>
@@ -33,6 +34,7 @@ function Man() {
       </div>
     </section>
     </main>
+    </div>
    <Footer />
     </>
   )
