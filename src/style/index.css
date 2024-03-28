@@ -165,11 +165,13 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .modal img {
   max-width: 90%;
   max-height: 90%;
+  border-radius: 10px;
 }
 
 .shoes >img{
@@ -692,14 +694,18 @@ margin-top: 20px;
     margin-bottom: 10px;
   }
   /****SHOEINFO****/
+.sizes > button{
+  font-size: 0.7rem;
+}
+
   .shoes{
     width: 100%;
   }
   .shoeInfo-text >h1{
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .shoeInfo-text >p{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   form{
     font-size: 1.2rem;
