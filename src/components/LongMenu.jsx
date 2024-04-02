@@ -42,9 +42,9 @@ export default function LongMenu() {
         open={open}
         onClose={handleClose}
         PaperProps={{
-          style: {
+          style: {   
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: '15ch',
+            width: '20ch',
           },
         }}
       >

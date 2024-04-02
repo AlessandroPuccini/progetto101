@@ -26,9 +26,9 @@ function Footer() {
       <div className='footer-text'>
      <a href=''><h6>Newsletter</h6></a> 
       </div>
-      <div className='footer-button'>
+      {/* <div className='footer-button'>
         <button onClick={handleClick}>User List</button>
-        </div>
+        </div> */}
       <div className='social'>
       <InstagramIcon fontSize='large'/> 
       <LinkedInIcon fontSize='large'/>
