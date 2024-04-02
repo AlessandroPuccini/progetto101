@@ -1,7 +1,7 @@
 import React,{useState} from 'react' 
 import IMAGES from '../images/Images';
 import { useDispatch,useSelector } from 'react-redux';
-import { addToCart, removeFromCart, increaseQuantity, decreaseQuantity } from '../redux/cartSlice';
+import { addToCart, removeFromCart, updateQuantity, getTotals} from '../redux/cartSlice';
 import Divider from '@mui/material/Divider';
 import '../style/temporaryDrawer.css';
 import '../style/index.css';
@@ -32,8 +32,6 @@ const qty = cartShoes.reduce((acc, item) => acc + item.qty, 0);
             <p>€ {item.price}</p>
             <p>{item.qty}</p> 
             <button onClick={() => dispatch(removeFromCart(item.id))}><img src={IMAGES.image10} alt='trash'/></button>
-            <button onClick={() => dispatch(increaseQuantity(item.id))}>+</button>
-            <button onClick={() => dispatch(decreaseQuantity(item.id))}>-</button>
            </div>
            ))}
         </div>    
