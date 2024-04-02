@@ -69,10 +69,3 @@ export default function TemporaryDrawer(props) {
   );
 }
 
-
-
-{/* <Box
-      sx={{ width: drawerWidth }}
-      role="presentation"
-      onKeyDown={toggleDrawer(anchor, false)}
-    ></Box> */}
