@@ -4,13 +4,11 @@ import CardLine from '../CardLine.jsx';
 import Navbar from '../Navbar.jsx';
 import Footer from '../Footer.jsx';
 import { Link } from 'react-router-dom';
-
-
+import Video from '../Video.jsx';
 
 function Man() {
   return (
     <>
-    
     <Navbar />
     <main>
     <section className='man'>

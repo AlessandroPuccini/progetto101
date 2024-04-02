@@ -32,6 +32,20 @@ import { createSlice } from '@reduxjs/toolkit';
       state.cartItems = state.cartItems.filter(item => 
         item.id !== action.payload)
     },
+    increaseQuantity: (state, action) => {
+      const { id } = action.payload;
+      const item = state.cartItems.find(item => item.id === id);
+      if (item) {
+        item.quantity++;
+      }
+    },
+    decreaseQuantity: (state, action) => {
+      const { id } = action.payload;
+      const item = state.cartItems.find(item => item.id === id);
+      if (item && item.quantity > 0) {
+        item.quantity -=1;
+      } 
+    },
     updateQuantity: (state, action) => {
       const { id, quantity } = action.payload;
       const item = state.cartItems.find(item => item.id === id);
@@ -47,7 +61,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 
-export const { addToCart,removeFromCart, updateQuantity, getTotals, clearCart} = cartSlice.actions;
+export const { addToCart,removeFromCart, updateQuantity, increaseQuantity, decreaseQuantity, getTotals, clearCart} = cartSlice.actions;
 
 export const cartReducer =  cartSlice.reducer;
 

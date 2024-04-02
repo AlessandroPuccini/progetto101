@@ -10,9 +10,11 @@ function About() {
     <Navbar />
     <main>
     <div className='about-section'>
+      <div className='logLine'>
+        <p>"The difference between style and fashion is in the quality!"</p>
+      </div>
       <div className='about-text'>
-     
-       <h1>WE ARE 101</h1>
+       <h2>WE ARE 101</h2>
        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
         Magnam eligendi in eius cupiditate, eos inventore maiores necessitatibus labore sequi placeat 
         magni vitae rerum minima dignissimos repellat aliquam molestias. 

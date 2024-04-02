@@ -32,7 +32,6 @@ body {
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
-  height: 100%;
   padding-top: 160px;
 }
 button {
@@ -65,6 +64,9 @@ button:hover{
 #homePage img {
   width: 100%;
   padding: 0 10px;
+}
+#man{
+  padding-bottom: 5px;
 }
 /***CARD***/
 
@@ -226,6 +228,12 @@ video{
   left: 0;
   object-fit: cover;
   padding: 10px;
+}
+.videoCard{
+  width: 540px;
+  height: 960px;
+  border-radius: 150px;
+  z-index: 40;
 }
 
 
@@ -488,6 +496,14 @@ margin-top: 20px;
   width: 100%;
   margin: 0 auto;
 }
+.logLine{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 900px;
+
+}
 .about-text{
   width: 50%;
   margin: 0 auto;
@@ -495,16 +511,19 @@ margin-top: 20px;
   padding-left: 65px;
 }
 .about-text >p{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   word-spacing: 4px;
   line-height: 30px;
   text-align: justify;
 }
 .about-image{
-  width: 50%;
+  width: 35%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
+  border: 6px solid black;
+  border-radius: 10px;
 }
 .about-image >img{
   width: 100%;
@@ -631,7 +650,6 @@ margin-top: 20px;
   }
   .about-image{
     width: 100%;
-    padding: 0 20px;
     text-align: center;
   }
   .footer-section{
@@ -673,6 +691,13 @@ margin-top: 20px;
   }
   .about-text >h1{
     font-size: 2rem;
+  }
+  .about-image{
+    width: 90%;
+  }
+  .logLine{
+    padding: 0 25px;
+    text-align: center;
   }
   /***FOOTER***/
   .footer-section a{
@@ -742,8 +767,7 @@ margin-top: 20px;
     text-align: center;
   }
   .about-image{
-    width: 50%;
-    padding: 0 20px;
+    width: 35%;
     text-align: center;
   }
   .about-image >img{
