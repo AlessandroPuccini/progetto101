@@ -12,7 +12,8 @@ function About() {
     <div className='about-section'>
       <div className='logLine'>
         <p>"The difference between style and fashion is in the quality!"</p>
-      </div>
+        </div>
+      
       <div className='about-text'>
        <h2>WE ARE 101</h2>
        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
