@@ -18,6 +18,7 @@ function Woman() {
       <video loop autoPlay muted>
         <source  src={IMAGES.VideoDonna} type='video/mp4'/>
       </video>
+      <h1>WOMAN <br/> CATALOG</h1>
       </div>
       <div className='card-line-section'> 
       <Link to={'/progetto101/womancatalog'}> <CardLine 
