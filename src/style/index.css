@@ -248,11 +248,12 @@ button:hover{
   transition-property: all;
   transition-duration: 1s;
   z-index: 3;
-  color: #5e5e5e;
+  color: #000000;
   margin-left: 25px;
+  font-size: 4.5em;
 }
 .video-donna > h1:hover{
-  color: #000000;
+  /* color: #ffffff; */
   transform: scale(1.1);
 }
 .video-donna > video{
@@ -262,14 +263,14 @@ button:hover{
   left: 0;
   object-fit: cover;
   padding: 10px;
-  opacity: 0;
+  /* opacity: 0; */
   transition-property: all;
-  transition-duration: 2s;
+  transition-duration: 1.5s;
   z-index: 2;
 }
-.video-donna:hover > video {
+/* .video-donna:hover > video {
   opacity: 1;
-}
+} */
   
 .video-uomo{
   width: 100%;
@@ -277,6 +278,7 @@ button:hover{
   display: grid;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   position: relative;
   margin-bottom: 150px;
   /* padding-top: 56.25%; */
@@ -301,11 +303,11 @@ button:hover{
   transition-property: all;
   transition-duration: 1s;
   z-index: 3;
-  color: #5e5e5e;
+  color: #000000;
   margin-left: 25px;
+  font-size: 4.5em;
 }
 .video-uomo > h1:hover{
-  color: #000000;
   transform: scale(1.1);
 }
 
@@ -316,14 +318,14 @@ button:hover{
   left: 0;
   object-fit: cover;
   padding: 10px;
-  opacity: 0;
+  /* opacity: 0; */
   transition-property: all;
-  transition-duration: 2s;
+  transition-duration: 1.5s;
   z-index: 2;
 }
-.video-uomo:hover > video {
+/* .video-uomo:hover > video {
   opacity: 1;
-}
+} */
 
 .videoCard{
   width: 540px;

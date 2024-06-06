@@ -16,7 +16,7 @@ function Man() {
       <video loop autoPlay muted>
         <source  src={IMAGES.VideoUomo} type='video/mp4'/>
       </video>
-      <h1>MAN <br/>CATALOG</h1>
+      <h1>MAN<br/>CATALOG</h1>
       </div>
       <div className='card-line-section'> 
     
