@@ -2,19 +2,19 @@
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-menu-content {
     display: none;
     position: absolute;
     min-width: 250px;
-    z-index: 1;
     height: 100vh;
     background-color: #fefce7;
     border-radius: 2%;
+    z-index: 1000;
 
   }
   
-  .dropdown-menu:hover .dropdown-menu-content {
+  .dropdown-menu-content.open {
     display: block;
   }
   
@@ -31,4 +31,17 @@
   .dropdown-menu-content a:hover {
     background-color: #000000;
     color: white;
+  }
+
+
+  @media screen and (max-width: 400px){
+    .dropdown-menu-content {
+      min-width: 200px;
+      height: 70vh;
+      opacity: 0.9;
+    }
+    .dropdown-menu-content a {
+      padding: 12px 50px;
+      font-size: 1.3rem;
+    }
   }
